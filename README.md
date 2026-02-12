@@ -198,5 +198,12 @@ All calculations follow **DAX best practices** using:
 ✔ Enhanced revenue performance visibility
 ✔ Interactive executive-ready dashboard design
 
+---
+
+![Power BI](https://img.shields.io/badge/Tool-Power%20BI-yellow)
+![DAX](https://img.shields.io/badge/Language-DAX-blue)
+![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+
 
 
