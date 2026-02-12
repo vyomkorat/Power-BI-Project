@@ -2,128 +2,172 @@
 
 ## 📌 Project Overview
 
-This project presents an **end-to-end Supply Chain & Logistics Analytics Dashboard** built using **Power BI**. The dashboard provides actionable insights across **Suppliers, Inventory, Shipments, and Customers**, enabling data-driven decision-making for cost optimization, efficiency improvement, and performance monitoring.
+This project presents a comprehensive **Supply Chain & Logistics Analytics Dashboard** built in **Power BI**. The solution analyzes operations across **Suppliers, Inventory, Shipments, and Customers**, providing actionable insights for cost optimization, operational efficiency, and strategic decision-making.
 
-The project uses a **star-schema data model** with multiple fact and dimension tables and applies **industry-standard KPIs** commonly used in manufacturing and supply chain analytics.
+The dashboard follows a **star-schema data model**, applies industry-standard KPIs, and includes an interactive **custom slicer panel** for dynamic filtering.
 
 ---
 
-## 🛠️ Tools & Technologies
+# 🛠️ Tools & Technologies
 
-- **Power BI Desktop** – Data modeling, DAX, visualization
-- **DAX (Data Analysis Expressions)** – KPI calculations
+- **Power BI Desktop** – Data modeling & visualization
+- **DAX (Data Analysis Expressions)** – KPI calculations & time intelligence
 - **CSV Data Sources** – Fact & Dimension tables
-- **Supply Chain Analytics Concepts** – Inventory, Logistics, Revenue Growth
+- **Supply Chain & Logistics KPIs** – Inventory, Lead Time, Perfect Order, Revenue Growth
 
 ---
 
-## 🗂️ Data Model
+# 🗂️ Data Model Architecture
 
-### Fact Tables
+## ⭐ Fact Tables
 
-- `fact_sales` – Sales revenue, quantity, profit
+- `fact_sales` – Revenue, quantity sold, profit
 - `fact_inventory` – Inventory value, stock levels, defective units
-- `fact_shipment` – Shipment status, delays, shipping cost
-- `fact_procurement` – Supplier orders, unit cost
-- `fact_production` – Production quantities and defects
+- `fact_shipment` – Shipment status, delay reasons, shipping cost
+- `fact_procurement` – Supplier unit cost & orders
+- `fact_production` – Production quantities & defects
 
-### Dimension Tables
+## 📘 Dimension Tables
 
-- `dim_date` – Date hierarchy (Year, Month, Day)
-- `dim_product` – Product details
-- `dim_supplier` – Supplier information
-- `dim_customer` – Customer & channel data
-- `dim_facility` – Manufacturing & storage locations
+- `dim_date` – Date hierarchy (Year, Month, Quarter)
+- `dim_product` – Product information
+- `dim_supplier` – Supplier details
+- `dim_customer` – Customer & channel information
+- `dim_facility` – Manufacturing locations
 
-The model follows **best practices** for Power BI (one-to-many relationships, single date table).
+✔ Single Date Table
+✔ One-to-Many Relationships
+✔ Clean Star Schema Design
 
 ---
 
-## 📊 Dashboard Pages & Key Insights
+# 📊 Dashboard Pages & Visual Insights
 
-### 1️⃣ Executive Overview
+---
 
-**Purpose:** High-level supply chain health monitoring
+# 1️⃣ Overview Page
 
-**Key KPIs:**
+
+
+### Key KPIs
 
 - Total Revenue: \~176.95M
 - Profit: \~48.56M
 - Profit Margin: \~27.44%
-- Perfect Order Rate: \~75.3%
+- Perfect Order Rate: \~75%
 
-**Insight:**
-The supply chain is financially strong, but operational reliability can be improved, as nearly **1 in 4 orders** is not fulfilled perfectly.
+### Business Insight
+
+The organization is financially strong but operational reliability needs improvement. Nearly **25% of orders are not fulfilled perfectly**, highlighting supply chain inefficiencies.
 
 ---
 
-### 2️⃣ Supplier Analysis
+# 2️⃣ Supplier Analysis Page
 
-**KPIs & Visuals:**
 
-- Average Lead Time by Supplier & Country
+
+### Key Visuals
+
+- Average Lead Time by Country
 - Average Quality Score by Supplier
 - Total Unit Cost by Supplier
+- Unit Cost Trend by Month
 
-**Insights:**
+### Key Insights
 
-- Vietnam and India provide the **shortest lead times**.
-- Taiwan & Sony suppliers deliver the **highest quality scores**.
-- Supplier cost variation is low, so **lead time and quality** should drive sourcing decisions.
+- Vietnam & India provide shortest lead times.
+- Taiwan Semiconductor & Sony Semiconductor have highest quality scores.
+- Cost variation is minimal, making **lead time and quality key differentiators**.
 
 ---
 
-### 3️⃣ Inventory Analysis
+# 3️⃣ Inventory & Production Page
 
-**KPIs & Visuals:**
 
-- Inventory Value & Safety Stock
+
+### Key KPIs
+
+- Inventory Value: \~160K
+- Safety Stock: \~89K
 - Inventory Turnover Rate
 - Days of Inventory (DIO)
-- Defective Units Trend
 
-**Insights:**
+### Insights
 
-- Inventory turnover is **low**, indicating slow-moving stock.
-- High safety stock suggests risk mitigation against lead-time uncertainty.
-- Defective units contribute to delayed fulfillment and reduced efficiency.
+- Low inventory turnover indicates slow-moving stock.
+- High safety stock suggests risk mitigation strategy.
+- Defective units impact order fulfillment and inventory efficiency.
 
 ---
 
-### 4️⃣ Shipment & Logistics
+# 4️⃣ Shipment & Logistics Page
 
-**KPIs & Visuals:**
 
-- Total Shipments & Delivered %
-- Shipment Delays by Carrier
-- Delay Reasons Analysis
+
+### Key KPIs
+
+- Total Shipments: \~8K
+- Delivered %: \~75%
+- Total Delays
 - Shipping Cost Trend
 
-**Insights:**
+### Delay Analysis
 
-- Delivery success rate is \~75%, highlighting logistics bottlenecks.
-- Major delay reasons include **carrier capacity, documentation, and port congestion**.
-- Shipping costs peak toward year-end, showing strong seasonality.
+Major delay reasons:
 
----
+- Carrier Capacity
+- Documentation Issues
+- Port Congestion
+- Customs Clearance
 
-### 5️⃣ Customer & Revenue Analysis
+### Insight
 
-**KPIs & Visuals:**
-
-- Total Revenue, Profit & YoY Growth
-- Revenue by Sales Channel
-- Discount % vs Quantity Sold
-
-**Insights:**
-
-- Retail is the largest revenue contributor, followed closely by online channels.
-- Revenue growth fluctuates month-over-month, influenced by inventory availability and logistics performance.
-- Discounting is controlled and does not significantly erode margins.
+Logistics performance is the primary operational bottleneck. Carrier optimization and documentation automation can significantly improve service levels.
 
 ---
 
-## 📐 Key DAX Measures Used
+# 5️⃣ Customer & Revenue Analysis Page
+
+
+
+### Key Metrics
+
+- Revenue by Channel
+- YoY Revenue Growth
+- Profit Margin %
+- Discount Analysis
+
+### Insights
+
+- Retail is largest revenue contributor.
+- Online channel shows strong growth potential.
+- Discounting is controlled and does not significantly impact margin.
+
+---
+
+# 🎛️ Custom Interactive Slicer Panel (New Feature)
+
+
+
+This dashboard includes a **custom-designed slicer panel** with toggle functionality using shapes and bookmarks.
+
+### Features:
+
+- Category Filter
+- Status Filter
+- Country Filter
+- Slide-in panel design
+- Clean UI with close button
+
+### Business Benefit:
+
+- Enhances user experience
+- Allows dynamic filtering without cluttering visuals
+- Improves executive presentation readiness
+
+---
+
+# 📐 Key DAX Measures Implemented
 
 - Total Revenue
 - Profit & Profit Margin %
@@ -132,18 +176,24 @@ The supply chain is financially strong, but operational reliability can be impro
 - Total Delivered Shipments
 - Delivery Success Rate %
 - Year-over-Year Revenue Growth
+- Total Delay by Carrier
 
-All measures are written using **DAX best practices** (`CALCULATE`, `DIVIDE`, time intelligence functions).
+All calculations follow **DAX best practices** using:
 
----
-
-## 🚀 Business Value
-
-- Improves **supplier selection** using cost, quality, and lead time
-- Identifies **inventory inefficiencies** and overstocking risk
-- Highlights **logistics bottlenecks** and delay root causes
-- Supports **executive decision-making** with clear KPIs
+- `CALCULATE()`
+- `DIVIDE()`
+- `SAMEPERIODLASTYEAR()`
+- Time Intelligence Functions
 
 ---
+
+# 🚀 Business Impact
+
+✔ Improved supplier evaluation (Cost vs Lead Time vs Quality)
+✔ Identified logistics bottlenecks
+✔ Detected slow-moving inventory risk
+✔ Enhanced revenue performance visibility
+✔ Interactive executive-ready dashboard design
+
 
 
