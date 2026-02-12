@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="preview image/Home.png" width="1000"/>
+</p>
 # 📦 Supply Chain Analytics Dashboard (Power BI)
 
 ## 📌 Project Overview
